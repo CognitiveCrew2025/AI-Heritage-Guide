@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Heritage Guide</title>
+  <meta name="description" content="Experience history through storytelling with the modern AI Heritage Guide. Explore monuments like the Taj Mahal, Red Fort, and Qutub Minar through immersive chat interactives.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="bg-shape shape-1"></div>
+  <div class="bg-shape shape-2"></div>
+  
+  <div class="app-container">
+
+    <!-- LANDING SCREEN -->
+    <section id="landing-screen" class="screen active">
+      <div class="landing-content">
+        <div class="icon-pulse">
+             <i class="fa-solid fa-landmark dome-icon"></i>
+        </div>
+        <h1 class="main-title">AI Heritage Guide</h1>
+        <p class="subtitle">Experience history through storytelling</p>
+        
+        <!-- Age Selection -->
+        <div class="age-selection">
+            <label for="age-select">Select your age group:</label>
+            <select id="age-select">
+                <option value="Child" style="color: black;">Child (under 13)</option>
+                <option value="Teen"  style="color: black;">Teen (13-18)</option>
+                <option value="Adult" style="color: black;" selected>Adult (18+)</option>
+            </select>
+        </div>
+
+        <button id="start-btn" class="primary-btn pulse-hover">
+          Start Exploring <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- MAIN CHAT SCREEN -->
+    <section id="main-screen" class="screen hidden">
+      <!-- Top Settings Bar -->
+      <header class="app-header glass-panel">
+        <div class="header-top">
+           <h2 class="app-logo"><i class="fa-solid fa-landmark"></i> Heritage AI</h2>
+           <span id="current-lang-display" class="lang-display">Language: English</span>
+           <button class="icon-btn" id="menu-toggle"><i class="fa-solid fa-sliders"></i></button>
+        </div>
+        
+        <!-- Configuration Options -->
+        <div class="config-panel" id="config-panel">
+          <div class="config-group">
+            <label for="monument-select">Monument</label>
+            <div class="custom-select">
+              <select id="monument-select">
+                <option value="taj-mahal">Taj Mahal</option>
+                <option value="red-fort">Red Fort</option>
+                <option value="qutub-minar">Qutub Minar</option>
+              </select>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+
+          <div class="config-row">
+            <div class="config-group">
+              <label for="perspective-select">Perspective</label>
+              <select id="perspective-select" class="minimal-select">
+                <option value="king">King</option>
+                <option value="soldier">Soldier</option>
+                <option value="commoner">Commoner</option>
+                <option value="guide">Guide</option>
+              </select>
+            </div>
+            
+            <div class="config-group">
+              <label for="language-select">Language</label>
+              <select id="language-select" class="minimal-select">
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Marathi">Marathi</option>
+              </select>
+            </div>
+            
+            <div class="config-group">
+              <label for="style-select">Style</label>
+              <select id="style-select" class="minimal-select">
+                <option value="short">Short</option>
+                <option value="detailed">Detailed</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Chat Container -->
+      <main class="chat-container" id="chat-container">
+        <!-- Messages will be appended here -->
+      </main>
+
+      <!-- Input Area -->
+      <footer class="input-area glass-panel">
+        <div class="suggested-questions" id="suggested-questions">
+          <button class="suggested-chip">Who built you?</button>
+          <button class="suggested-chip">Tell me a secret.</button>
+          <button class="suggested-chip">What is your architecture?</button>
+        </div>
+        
+        <div class="input-wrapper">
+          <input type="text" id="chat-input" placeholder="Ask about the history..." autocomplete="off"/>
+          <button id="send-btn" class="send-btn">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </div>
+      </footer>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
