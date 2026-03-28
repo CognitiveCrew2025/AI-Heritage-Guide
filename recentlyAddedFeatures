@@ -1,0 +1,15 @@
+Recently Added Features
+User Profile (Age Group Detection): The Landing screen now features an age selection dropdown. Your choice (Child, Teen, Adult) is locked in when you click Start Exploring.
+Age-Based Adaptations:
+Select Child and the bot uses emojis (🏰👑) and enthusiastically simplified words ("super cool").
+Select Teen and the bot takes on a slightly casual, relatable tone ("Basically... It's actually pretty wild").
+Multilingual Confidence:
+The configuration panel's Language Dropdown now includes Hindi and Marathi.
+Selecting these overrides the language instruction in the generated backend prompt: Respond ONLY in ${selectedLanguage} language.
+Test the translation locally by selecting English, Hindi, or Marathi!
+Human Feedback Loop:
+Each message generated dynamically inserts responsive buttons: 👍 Helpful, 👎 Not Helpful, and 🚩 Report Issue.
+Clicking any submits the feedback array (visible in the DevTools console layout).
+Learning Support: Clicking 👎 Not Helpful immediately triggers the "Learning" simulation, regenerating a much longer, clearer answer dynamically below your current response to improve the "Confidence Rating"!
+Confidence Rating Revamp:
+You will see the score dynamically adjust: >200 chars (High ✅), 100-200 (Medium ⚠️), and <100 (Low ❌). The fallback text "This response may be incomplete. Showing verified info recommended." automatically applies when Low.
