@@ -1,0 +1,16 @@
+Task Checklist: AI Heritage Guide
+ Initialize project structure
+ Create index.html structure
+ Create style.css matching a premium aesthetics plan
+ Create script.js for interactive logic and chat simulation
+ Implement Landing Screen UI
+ Implement Main Chat Interface
+ Configuration options UI (Monument, Perspective, Language, Style)
+ Message log interface (User & Bot bubbles)
+ Input field and "Send" interactions
+ Suggested Questions UI
+ Implement Logic Core
+ Transition between landing and main app
+ Message appending and typing animations
+ Clickable suggested questions
+ Verify UI behaves reliably locally
